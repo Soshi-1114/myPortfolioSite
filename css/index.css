@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: #151515 url("../images/bg.png") no-repeat fixed left bottom;
+  background: #151515 url("../images/bg-2.JPG") no-repeat fixed left bottom;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -104,6 +104,89 @@ body {
   line-height: 2.5;
 }
 
+.hobby {
+  background-color: black;
+  padding: 80px 0;
+}
+
+.hobby-wrapper {
+  display: table;
+  width: 100%;
+  margin-top: 60px;
+  table-layout: fixed;
+}
+.hobby-box {
+  position: relative;
+  display: table-cell;
+}
+.hobby-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.2;
+  transform: scaleY(-1);
+}
+.hobby-box.golf::after {
+  background-image: url("../images/golf.jpeg");
+}
+.hobby-box.trainning::after {
+  background-image: url("../images/trainning.jpeg");
+}
+.hobby-box.camera::after {
+  background-image: url("../images/camera.PNG");
+}
+.hobby-box.bike::after {
+  background-image: url("../images/camp.JPG");
+}
+
+.hobby-box:nth-child(odd) .hobby-image {
+  margin: 60% 0 0;
+}
+.hobby-box:nth-child(odd) .hobby-description,
+.hobby-box:nth-child(odd)::after {
+  top: 0;
+}
+.hobby-image {
+  display: block;
+  width: 100%;
+  margin: 0 0 60%;
+}
+
+.hobby-description {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  overflow: auto;
+}
+
+.hobby-description-inner {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.hobby-text {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 3.2rem;
+  line-height: 2;
+  color: white;
+}
+.hobby-text .button {
+  width: 60%;
+  margin-top: 0px;
+  padding: 3px;
+}
+
+/*  */
 .works {
   background-color: #383634;
   padding: 80px 0;
@@ -132,10 +215,10 @@ body {
   transform: scaleY(-1);
 }
 .work-box.tree::after {
-  background-image: url("../images/tree.jpg");
+  background-image: url("../images/app_img.png");
 }
 .work-box.building::after {
-  background-image: url("../images/building.jpg");
+  background-image: url("../images/comic_img.png");
 }
 .work-box.lake::after {
   background-image: url("../images/lake.jpg");
